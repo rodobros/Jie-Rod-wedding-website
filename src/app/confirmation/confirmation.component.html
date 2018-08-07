@@ -1,0 +1,45 @@
+<article>
+	<div class="confirmation-container">
+  		<h1>{{"confirm-title" | translate}}</h1>
+  		<p class="date-home">{{"confirm-date" | translate}}</p>
+  		<hr>
+  		<p class="confirmation-text">{{"confirm-text" | translate}}</p>
+  		<hr>
+      <p class="confirmation-text">{{"confirm-clothes-text" | translate}}</p>
+      <hr>
+  		<form *ngIf="!isConfirm && !isError" [formGroup]="confirmForm" class="confirmation-form" (ngSubmit)="confirm($event)">
+  			<ul class="form">
+  				<li>
+  				     <label>{{"confirm-name-label" | translate}} <span class="required">*</span></label>
+  				     <input [ngClass]="{'red-border' : (!confirmForm.get('firstname')?.valid && !confirmForm.get('firstname')?.pristine)}" type="text" name="firstname" formControlName="firstname" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="lastname" [ngClass]="{'red-border' : (!confirmForm.get('lastname')?.valid && !confirmForm.get('lastname')?.pristine)}" formControlName="lastname" class="field-divided" placeholder="Last" />
+  				</li>
+  				<li>
+    				<label for="email">{{"confirm-email-label" | translate}} <span class="required">*</span></label>
+    				<input [ngClass]="{'red-border' : (!confirmForm.get('email')?.valid && !confirmForm.get('email')?.pristine)}" formControlName="email" type="email" placeholder="Your email">
+    			</li>
+    			<li>
+    				<label for="host">{{"confirm-host-label" | translate}}<span class="required">*</span></label>
+    				<input [ngClass]="{'red-border' : (!confirmForm.get('host')?.valid && !confirmForm.get('host')?.pristine)}" formControlName="host" type="text" placeholder="host">
+    			</li>
+    			<li>
+            <label for="mealchoice">{{"meal-choice-label" | translate}}<span class="required">*</span></label>
+            <select [ngClass]="{'red-border' : (!confirmForm.get('mealchoice')?.valid && !confirmForm.get('mealchoice')?.pristine)}" id="mealchoice" name="mealchoice" formControlName="mealchoice">
+              <option value="" selected disabled hidden>{{"no-meal-choice" | translate}}</option>
+              <option value="chicken">{{"chicken-meal-choice" | translate}}</option>
+              <option value="beef">{{"beef-meal-choice" | translate}}</option>
+              <option value="vegetarian">{{"vegetarian-meal-choice" | translate}}</option>
+            </select> 
+          </li>
+          <li>
+    				<label for="allergy">{{"confirm-allergy-label" | translate}}</label>
+    				<textarea name="allergy" id="allergy" formControlName="allergy" class="field-long field-textarea"></textarea>
+    			</li>
+    			<li>
+  					<button type="submit">{{"confirm-button" | translate}}</button>
+  				</li>
+			</ul>
+		</form>
+		<p class="confirm-message" *ngIf="isConfirm">{{"confirm-success-text" | translate}}</p>
+		<p class="confirm-message" *ngIf="isError">{{"confirm-error-text" | translate}}</p>
+	</div>
+</article>

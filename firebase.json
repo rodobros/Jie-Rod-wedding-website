@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      { "source": "/", "destination": "/index.html"},
+      { "source": "/home", "destination": "/index.html"},
+      { "source": "/venue", "destination": "/index.html"},
+      { "source": "/confirmation", "destination": "/index.html"},
+      { "source": "/guests", "destination": "/index.html"},
+      { "source": "/funquiz", "destination": "/index.html"},
+      { "source": "/api/**", "function": "app" }
+    ]
+  }
+}

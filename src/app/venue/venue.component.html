@@ -1,0 +1,35 @@
+<article>
+  <h1>{{"venue-title" | translate}}</h1>
+  <hr>
+  <p id="venue-description">{{"venue-text" | translate}}</p>
+
+  <section class="row venue-info">
+    <div class="col">
+    	<a id="map-container" href="https://www.google.com/maps/place/1054+Boulevard+Arthur-Sauv%C3%A9,+Saint-Eustache,+QC+J7R+4K3,+Canada/@45.5803729,-73.9780531,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc92e85ef232f5f:0x8f1b5d12aa48768f!8m2!3d45.5803729!4d-73.9758644">
+    		<img class="map-img" src="https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=600x400&maptype=roadmap&markers=color:blue|label:S|45.5803729,-73.9780531&key=AIzaSyBsqnY5ty3vEgWxA49KrhVjiLXkQTELm-o" alt="map"/>
+    	</a>
+    </div>
+    <div class="col">
+      <div class="carousel-container venue-carousel cellphone-venue-carousel">
+  			<ngx-carousel
+          [inputs]="carouselBanner"
+          [moveToSlide]="1">
+          <ngx-item NgxCarouselItem class="bannerStyle">
+               <img class="carrousel_venue_img " src="/assets/img/const1.jpg" alt="cons1" > 
+          </ngx-item>
+          <ngx-item NgxCarouselItem class="bannerStyle">
+               <img class="carrousel_venue_img" src="/assets/img/const2.jpg" alt="const2" > 
+          </ngx-item>
+          <ngx-item NgxCarouselItem class="bannerStyle">
+               <img class="carrousel_venue_img" src="/assets/img/const3.jpg" alt="const3"> 
+          </ngx-item>
+          <ngx-item NgxCarouselItem class="bannerStyle">
+               <img class="carrousel_venue_img" src="/assets/img/const4.jpg" alt="const4"> 
+          </ngx-item>
+        <img src="/assets/img/arrowl.png" NgxCarouselPrev class='leftRs'>
+        <img src="/assets/img/arrowr.png" NgxCarouselNext class='rightRs'>
+        </ngx-carousel>
+  		</div>
+    </div>
+  </section>
+</article>

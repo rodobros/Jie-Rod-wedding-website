@@ -1,0 +1,716 @@
+/************************* General Style *************************/
+
+@font-face {
+    font-family: 'FantasticReason'; 
+    src: url('../fonts/FantasticReason.ttf');
+}
+
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 3rem;
+  min-height: 100%;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+  transition: all 0.1s ease-in;
+}
+
+a:hover {
+  -webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #FFFFFF;
+  -webkit-fill-color: #FFFFFF;
+  text-shadow: 1px 0px 20px #11aec1;
+  cursor: pointer;
+}
+
+h1 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    /* "Palatino Linotype", "Book Antiqua", Palatino, serif;*/
+}
+
+/************************* Header *************************/
+header {
+  height: 70px;
+  background-color:  white;
+  font-size: 20px
+}
+
+header > .header-container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+header .logo {
+  display: inline-block;
+  height: 70px;
+  margin: 10px 0;
+}
+
+header .logo img {
+  height: 100%;
+}
+
+header nav {
+  display: inline-block;
+  position:relative;
+  top: 15px;
+  float: right;
+}
+
+header nav > ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0 10px 0 0;
+  list-style: none;
+}
+
+header nav > ul > li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+header nav > ul > li > a {
+  line-height: 60px;
+  color: black;
+  text-decoration: none;
+}
+
+header nav > ul > li.active > a {
+  color: #11aec1;
+  border-radius: 4px;
+}
+
+
+/************************* Main Content *************************/
+
+/*
+main {
+
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto 100px auto;
+}
+*/
+
+main {
+  margin: 0 auto;
+  padding-top: 20px;
+  width:96%;
+}
+
+
+
+article {
+  position: relative;
+  flex: 1;
+}
+
+article h1 {
+  margin-top: 30px;
+  font-size: 35px;
+  text-align: center;
+}
+
+article h2 {
+  margin-top: 0.8em;
+  font-size: 1.2em;
+}
+
+
+/* Contact info container */
+.contact-info {
+  padding: 20px 0;
+  margin: 40px 0 0 0;
+  text-align: center;
+  border: 1px solid #999;
+  border-radius: 8px;
+}
+
+.contact-info i {
+  margin-bottom: 10px;
+}
+
+.address {
+  font-style: italic;
+  text-align: center;
+}
+
+/****** Footer ******/
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+footer .languageChangeContainer {
+  display: inline-block;
+  position:relative;
+  float: right;
+  font-size: 10px;
+}
+
+footer .languageChangeContainer > ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0 10px 0 0;
+  list-style: none;
+}
+
+footer .languageChangeContainer > ul > li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+footer .languageChangeContainer > ul > li > p {
+  color: black;
+  text-decoration: none;
+}
+
+footer .languageChangeContainer p {
+  color: #337ab7;
+  text-decoration: none;
+  transition: all 0.1s ease-in;
+}
+
+footer .languageChangeContainer p:hover {
+  -webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #FFFFFF;
+  -webkit-fill-color: #FFFFFF;
+  text-shadow: 1px 0px 20px #11aec1;
+  cursor: pointer;
+}
+
+footer .languageChangeContainer p.selected-lang {
+  color: #11aec1;
+}
+
+
+/************************** radio button *************************/
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/************************* speech bubbles *************************/
+.speech-left {
+  position:relative;
+  width: 200px;
+  right:100px;
+  margin: 50px auto;
+  border-radius: 15px;
+  background: #11aec1;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  font-family: arial;
+}
+
+.speech-left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid #11aec1;
+  border-top: 15px solid #11aec1;
+  border-bottom: 15px solid transparent;
+  left: -16px;
+  top: 0px;
+}
+
+
+
+.speech-right {
+  position:relative;
+  width: 200px;
+  top: 150px;
+  left:100px;
+  margin: 50px auto;
+  border-radius: 15px;
+  background: #11aec1;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  font-family: arial;
+  position: relative;
+}
+
+.speech-right:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid #11aec1;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #11aec1;
+  border-bottom: 15px solid transparent;
+  right: -16px;
+  top: 0px;
+}
+
+.fade2 {
+  animation-name: fadeOutLater;
+  animation-duration: 2s;
+}
+
+.fade1 {
+  animation-name: fadeOut;
+  animation-duration: 1s;
+}
+
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutLater {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#rod {
+  position:relative;
+  float:left;
+  max-width:300px;
+  max-height:600px;
+  left:150px;
+  width: auto;
+  height: auto;
+}
+
+#mj {
+  position:relative;
+  float:right;
+  right:200px;
+  top: 350px;
+  max-width:200px;
+  max-height:200px;
+  width: auto;
+  height: auto;
+}
+
+.left-side {
+  flex: 1 0 33%;
+  min-width: 300px;
+  padding-left: 20px;
+  margin-top:25px;
+}
+
+.middle {
+  flex: 1 0 33%;
+  min-width: 300px;
+  padding-right: 20px;
+  margin-top:25px;
+}
+
+.right-side {
+  flex: 1 0 33%;
+  min-width: 300px;
+  padding-right: 20px;
+  margin-top:25px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction:row;
+}
+
+p.highlightable:hover {
+  background-color: #24e01a;
+  cursor:pointer;
+}
+
+p.highlightable:hover:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid #24e01a;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #24e01a;
+  border-bottom: 15px solid transparent;
+  right: -16px;
+  top: 0px;
+  cursor:pointer;
+}
+
+/************************* Home component  *************************/
+.home-carousel {
+  position:relative;
+  padding-top: 25px;
+  width:100%;
+  /*
+  min-width: 1200px;
+  height: 580px;
+  */
+}
+
+.over-carousel-content {
+  width:600px;
+  height:300px;
+  font-size: 40px;
+  color:white;
+  position: absolute;
+  margin: auto;
+  top: 10%; left: 0; bottom: 0; right: 0;
+  z-index: 10;
+  text-align: center;
+}
+
+.date-home {
+  text-align: center;
+  font-size: 30px;
+}
+
+#confirm-button-home {
+  color : white;
+  background-color: rgba(211,211,211, 0.5);
+  padding: 5px;
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+#confirm-button-home:hover {
+  background-color: rgba(17,174,193, 0.8);
+}
+
+/** confirmation component */
+.confirmation-container {
+  margin:20px;
+}
+
+.confirmation-text {
+  text-align: center;
+}
+
+.form {
+    margin:10px auto;
+    max-width: 400px;
+    padding: 20px 12px 10px 20px;
+    font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.form li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+.form label{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+.form input[type=text],
+.form input[type=date],
+.form input[type=datetime],
+.form input[type=number],
+.form input[type=search],
+.form input[type=time],
+.form input[type=url],
+.form input[type=email],
+textarea,
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none; 
+}
+.form input[type=text]:focus,
+.form input[type=date]:focus,
+.form input[type=datetime]:focus,
+.form input[type=number]:focus,
+.form input[type=search]:focus,
+.form input[type=time]:focus,
+.form input[type=url]:focus,
+.form input[type=email]:focus,
+.form textarea:focus,
+.form select:focus{
+    -moz-box-shadow: 0 0 8px #11aec1;
+    -webkit-box-shadow: 0 0 8px #11aec1;
+    box-shadow: 0 0 8px #11aec1;
+    border: 1px solid #11aec1;
+}
+.form .field-divided{
+    width: 49%;
+}
+
+.form .field-long{
+    width: 100%;
+}
+.form .field-select{
+    width: 100%;
+}
+.form .field-textarea{
+    height: 100px;
+}
+.form input[type=submit], .form-style-1 input[type=button]{
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+}
+.form input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.form .required{
+    color:red;
+}
+
+.form button {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.confirm-message {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.red-border {
+  border:1px solid red !important;
+}
+
+/* venue */
+
+.row {
+  display: flex;
+  margin: 0 -10px;
+  clear: both;
+  flex-wrap: wrap;
+}
+
+.row > .col {
+  padding: 0 10px;
+  flex: 1;
+}
+
+/* Contact info container */
+.venue-info {
+  padding: 20px 0;
+  margin: 40px 0 0 0;
+  text-align: center;
+}
+
+.venue-carousel {
+    position:relative;
+    width: 100%;
+    height: 400px;
+    min-width: 350px;
+}
+
+#venue-description {
+  margin: 40px 40px;
+}
+
+.bannerStyle h1 {
+        background-color: #ccc;
+        min-height: 300px;
+        text-align: center;
+        line-height: 300px;
+}
+
+.leftRs {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    left: 0;
+    z-index: 1;
+}
+
+.leftRs:hover {
+  cursor: pointer;
+}
+
+.rightRs {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    right: 0;
+    z-index: 1;
+}
+
+.rightRs:hover {
+    cursor: pointer;
+}
+
+.carrousel_home_img {
+    display: block;
+    /*
+    min-width: 1200px;
+    height: 580px;
+    width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    */
+    width: 100%;
+    height: auto;
+}
+
+.carrousel_venue_img {
+    width: 100%;
+    height: auto;
+}
+
+.cellphone-show-logo {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+    .cellphone-hide-logo {
+        display: none;
+    }
+
+    .cellphone-show-logo {
+      display: none;
+    }
+
+    .cellphone-home-title {
+      font-size: 17px !important; /* 35 */
+    }
+
+    .cellphone-date-home {
+      font-size: 15px !important; /* 30 */
+    }
+
+    .cellphone-button-home {
+      display: none;
+      font-size: 10px !important; /* 20 */
+    }
+
+    .cellphone-over-carousel-content {
+        width:300px;
+        height:150px;
+        color:white;
+        position: absolute;
+        margin: auto;
+        top: 0; left: 0; bottom: 10%; right: 0;
+        z-index: 10;
+        text-align: center;
+    }
+
+    .row {
+      display: block;
+      margin: 0 -10px;
+      clear: both;
+    }
+
+    #map-container {
+      display : block;
+    }
+}
+
+.map-img {
+  min-height: 230px;
+  min-width: 370px;
+  width: 100%;
+  height: auto;
+}

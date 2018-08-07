@@ -1,0 +1,56 @@
+<article>  
+  <div class="carousel-container home-carousel">
+  	<!--<carousel [sources]="imageSources" [config]="config"></carousel>-->
+  	<ngx-carousel
+      [inputs]="carouselBanner"
+      [moveToSlide]="1">
+        <ngx-item NgxCarouselItem class="bannerStyle">
+            <img class="carrousel_home_img" src="/assets/img/china2.jpg" alt="china2" > 
+        </ngx-item>
+        <ngx-item NgxCarouselItem class="bannerStyle">
+            <img class="carrousel_home_img" src="/assets/img/halifax5.jpg" alt="halifax1"> 
+        </ngx-item>
+        <ngx-item NgxCarouselItem class="bannerStyle">
+            <img class="carrousel_home_img" src="/assets/img/HK1.jpg" alt="HK1"> 
+        </ngx-item>
+        <ngx-item NgxCarouselItem class="bannerStyle">
+            <img class="carrousel_home_img" src="/assets/img/paris1.JPG" alt="paris1"> 
+        </ngx-item>
+        <ngx-item NgxCarouselItem class="bannerStyle">
+            <img class="carrousel_home_img" src="/assets/img/china4.jpg" alt="china4"> 
+        </ngx-item>
+        <ngx-item NgxCarouselItem class="bannerStyle">
+            <img class="carrousel_home_img" src="/assets/img/rome2.JPG" alt="rome2"> 
+        </ngx-item>
+        <ngx-item NgxCarouselItem class="bannerStyle">
+            <img class="carrousel_home_img" src="/assets/img/notredame1.jpg" alt="notredame1"> 
+        </ngx-item>
+        <ngx-item NgxCarouselItem class="bannerStyle">
+            <img class="carrousel_home_img" src="/assets/img/halifax2.jpg" alt="halifax2"> 
+        </ngx-item>
+        <ngx-item NgxCarouselItem class="bannerStyle">
+            <img class="carrousel_home_img" src="/assets/img/china5.jpg" alt="china5"> 
+        </ngx-item>
+        <ngx-item NgxCarouselItem class="bannerStyle">
+            <img class="carrousel_home_img" src="/assets/img/china8.JPG" alt="china8"> 
+        </ngx-item>
+        <ngx-item NgxCarouselItem class="bannerStyle">
+            <img class="carrousel_home_img" src="/assets/img/venise1.JPG" alt="venise1"> 
+        </ngx-item>
+        <ngx-item NgxCarouselItem class="bannerStyle">
+            <img class="carrousel_home_img" src="/assets/img/china3.jpg" alt="china3"> 
+        </ngx-item>
+        <ngx-item NgxCarouselItem class="bannerStyle">
+            <img class="carrousel_home_img" src="/assets/img/china10.JPG" alt="china10"> 
+        </ngx-item>
+        <img src="/assets/img/arrowl.png" NgxCarouselPrev class='leftRs'>
+        <img src="/assets/img/arrowr.png" NgxCarouselNext class='rightRs'>
+    </ngx-carousel>
+  	<div class="over-carousel-content cellphone-over-carousel-content">
+  		<h1 class="cellphone-home-title">{{"home-title" | translate}}</h1>
+  		<p class="date-home cellphone-date-home">23/6/18</p>
+  		<a id="confirm-button-home" class="cellphone-button-home" routerLink="/confirmation">{{"home-confirm-button" | translate}}</a>
+  	</div>
+  </div>
+</article>
+

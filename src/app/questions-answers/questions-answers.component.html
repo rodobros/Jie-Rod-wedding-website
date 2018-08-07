@@ -1,0 +1,29 @@
+<article >
+<div class="flex-container">
+  		<div class="left-side">
+    		<img id="rod" alt="rod" src="./assets/img/{{rodAvatar}}.png">
+  		</div>
+  		<div class="middle">
+  			<div *ngIf="isAnsweringQuestion" class="speech-container">
+	   			<p class="speech-left fade1">{{rodText}}</p>
+    		</div>
+    		<div *ngIf="!isAnsweringQuestion" class="speech-container">
+	   			<p class="speech-left fade1">{{rodText}}</p>
+    		</div>
+    		<div *ngIf="isAnsweringQuestion">
+      			<form class="speech-right fade2">
+        			<label class="container" *ngFor="let answer of currentQA?.answers">{{answer.text}}
+          				<input type="radio" value="{{answer.letter}}" (click)="verifyQuestion(answer.letter)" name="radio">
+          				<span class="checkmark"></span>
+        			</label>
+      			</form> 
+    		</div>
+    		<p *ngIf="!isAnsweringQuestion" class="speech-right fade2 highlightable" (click)="continue()">
+          		{{mjText}}
+        	</p>
+  		</div>
+  		<div class="right-side">
+  			<img id="mj" alt="mj" src="./assets/img/{{mjAvatar}}.png">
+  		</div>
+  	</div>
+</article>

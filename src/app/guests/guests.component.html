@@ -1,0 +1,10 @@
+<article>
+  <div *ngFor="let c of confirms">
+    <h2>{{c.firstname}} {{c.lastname}}</h2>
+    <p *ngIf="c.email"><em>email: </em>{{c.email}}</p>
+    <p *ngIf="c.allergy"><em>allergy: </em>{{c.allergy}}</p>
+    <p *ngIf="c.host"><em>host: </em>{{c.host}}</p>
+    <p *ngIf="c.mealchoice"><em>food: </em>{{c.mealchoice}}</p>
+    <hr>
+  </div>
+</article>

@@ -1,0 +1,43 @@
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <a routerLink="/home">
+        <img alt="logo" class="cellphone-hide-logo" src="./assets/img/logo3-2.png" title="Accueil">
+        <img alt="logo" class="cellphone-show-logo" src="./assets/img/logo-small.png" title="Accueil">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li routerLinkActive="active">
+          <a routerLink="/home">{{"header-home" | translate}}</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/venue">{{"header-venue" | translate}}</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/confirmation">{{"header-confirm" | translate}}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <div class="languageChangeContainer">
+    <ul>
+      <li>
+        <p [ngClass]="{'selected-lang' : translationService.isFrench()}"  (click)="changeToFrench()">Francais</p> 
+      </li>
+      <li>|</li>
+      <li>
+        <p [ngClass]="{'selected-lang' : translationService.isEnglish()}"  (click)="changeToEnglish()">English</p>
+      </li>
+      <li>|</li>
+      <li>
+        <p [ngClass]="{'selected-lang' : translationService.isMandarin()}"  (click)="changeToMandarin()">中文</p>
+      </li>
+    </ul>
+  </div>
+</footer>
